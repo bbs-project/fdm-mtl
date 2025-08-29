@@ -1,0 +1,87 @@
+# Halibut Multi-Task Learning Dataset Configuration
+
+# Path to the root directory of the unified dataset
+# The script will resolve the absolute path from this relative path
+path: /home/user/fdm/halibut-mtl/datasets/
+
+# Add these two lines for the MultiTaskDataset
+det_label_dir: det_labels
+cls_label_dir: cls_labels
+
+# Define train and validation image directories
+train: images/train
+val: images/val
+det_labels_train: det_labels/train
+cls_labels_train: cls_labels/train
+det_labels_val: det_labels/val
+cls_labels_val: cls_labels/val
+# test: images/test  # Optional: for testing after training
+
+# --- Detection Task ---
+# Class names for detection (symptoms)
+# The order must match the label indices (0, 1, 2, ...)
+names:
+  0: Bleeding
+  1: Corrosion
+  2: Tumor
+  3: Ulcer
+  4: eyesSymptom
+  5: otherSymptom
+
+# --- Classification Task ---
+# Class names for classification (diseases)
+# The order must match the label indices from your cls_labels/*.txt files
+# This is for reference; the model uses nc_cls from the model.yaml
+names_cls:
+  0: normal
+  1: etc
+  2: viral_hemorrhagic_septicemia
+  3: emaciation
+  4: emaciation_vibrio
+  5: vibrio
+  6: viral_hemorrhagic_septicemia_vibrio
+  7: emaciation_vibrio_edwardsiella
+  8: lymphocystis_vibrio
+  9: scuticociliatosis
+  10: kudoa
+  11: emaciation_kudoa
+  12: edwardsiella
+  13: emaciation_edwardsiella
+  14: lymphocystis
+  15: scuticociliatosis_vibrio
+  16: lymphocystis_emaciation
+  17: streptococcus_vibrio
+  18: emaciation_streptococcus
+  19: lymphocystis_edwardsiella
+  20: streptococcus
+  21: emaciation_streptococcus_vibrio
+  22: lymphocystis_kudoa_vibrio
+  23: lymphocystis_kudoa_edwardsiella
+  24: scuticociliatosis_streptococcus
+  25: kudoa_scuticociliatosis
+  26: emaciation_kudoa_edwardsiella
+  27: lymphocystis_kudoa
+  28: viral_hemorrhagic_septicemia_scuticociliatosis_vibrio
+  29: lymphocystis_scuticociliatosis_streptococcus_vibrio
+  30: vibrio_edwardsiella
+  31: lymphocystis_streptococcus
+  32: lymphocystis_emaciation_kudoa_vibrio
+  33: emaciation_kudoa_streptococcus
+  34: emaciation_kudoa_vibrio
+  35: viral_hemorrhagic_septicemia_streptococcus
+  36: viral_hemorrhagic_septicemia_scuticociliatosis
+  37: scuticociliatosis_streptococcus_vibrio
+  38: lymphocystis_emaciation_vibrio
+  39: lymphocystis_scuticociliatosis_vibrio
+  40: kudoa_scuticociliatosis_vibrio
+  41: kudoa_edwardsiella
+  42: kudoa_vibrio
+  43: lymphocystis_emaciation_edwardsiella
+  44: viral_hemorrhagic_septicemia_emaciation
+  45: lymphocystis_emaciation_scuticociliatosis_vibrio
+  46: emaciation_kudoa_streptococcus_vibrio
+  47: lymphocystis_scuticociliatosis
+  48: kudoa_streptococcus
+  49: emaciation_scuticociliatosis
+  50: viral_hemorrhagic_septicemia_emaciation_vibrio
+  51: kudoa_vibrio_edwardsiella

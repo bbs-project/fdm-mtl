@@ -1,0 +1,3 @@
+# Ignore dataset files and directories
+datasets/
+*.log

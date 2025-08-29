@@ -1,0 +1,28 @@
+path: /home/user/fdm/halibut-mtl/datasets/
+det_label_dir: det_labels
+cls_label_dir: cls_labels_merged
+train: images/train
+val: images/val
+det_labels_train: det_labels/train
+cls_labels_train: cls_labels_merged/train
+det_labels_val: det_labels/val
+cls_labels_val: cls_labels_merged/val
+names:
+  0: Bleeding
+  1: Corrosion
+  2: Tumor
+  3: Ulcer
+  4: eyesSymptom
+  5: otherSymptom
+names_cls:
+  0: normal
+  1: etc
+  2: viral_hemorrhagic_septicemia
+  3: emaciation
+  4: vibrio
+  5: scuticociliatosis
+  6: kudoa
+  7: edwardsiella
+  8: lymphocystis
+  9: streptococcus
+  10: complex

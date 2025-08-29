@@ -1,0 +1,1 @@
+nohup python train_merged.py --name=y11s_merged_weighted_class --pretrained=/home/user/fdm/halibut-mtl/weights/yolo11s.pt --model=/home/user/fdm/halibut-mtl/yaml/model/y11s_merged.yaml --device=2 > y11s_merged_weighted_class.log 2>&1 &
