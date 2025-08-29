@@ -1,4 +1,4 @@
-# Halibut Mtl
+# MTL (Multi Task Learning) of Flatfish Disease Monitoring Service
 
 ## Environment
 
