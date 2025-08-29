@@ -50,3 +50,80 @@ names_cls:
 ```
 4.  model의 yaml 파일에 있는 '- [21, 1, Classify, [11]]' 부분의 [11] 값을 cls의 클래스 개수로 변경
 5.  위에서 정의한 yaml파일들을 기반으로 train.py 실행
+
+## Conda environment
+1. Activate environment
+```
+$ conda activate fdm-mtl
+```
+
+2. Deactivate environment
+```
+$ conda deactivate
+```
+
+
+## Experiment Server
+- sbs71 (177.77)
+  - /home/user/fdm/halibut-mtl
+- sbs32 (184.197)
+  - /home/fabric/fdm/halibut-mtl
+- data (not synced on GitHub)
+  - halibut-mtl/datasets
+```
+drwxr-xr-x 10 fabric docker   180 Aug  8 17:25 .
+drwxr-xr-x 13 fabric docker  4096 Aug  8 18:37 ..
+drwxr-xr-x  4 fabric docker    42 Aug  8 17:18 cls_labels
+drwxr-xr-x  4 fabric docker    42 Aug  8 17:20 cls_labels_merged
+drwxr-xr-x  4 fabric docker    42 Aug  8 17:16 det_labels
+drwxr-xr-x  5 fabric docker    59 Aug  8 17:14 images
+drwxr-xr-x  4 fabric docker    42 Aug  8 17:22 jsons
+drwxr-xr-x  2 fabric docker 20480 Aug  8 17:23 jsons_orphaned
+drwxr-xr-x  4 fabric docker    86 Aug  8 17:27 labels
+drwxr-xr-x  4 fabric docker    86 Aug  8 17:25 shrink
+```  
+  - *.pt
+```
+./halibut/result/mtl2/weights/last.pt
+./halibut/result/mtl2/weights/best.pt
+./halibut/result/mtl4/weights/last.pt
+./halibut/result/mtl4/weights/best.pt
+./halibut/result/mtl10/weights/last.pt
+./halibut/result/mtl10/weights/best.pt
+./halibut/result/mtl11/weights/last.pt
+./halibut/result/mtl11/weights/best.pt
+./halibut/test3/weights/last.pt
+./halibut/test3/weights/best.pt
+./halibut/y11n_merged_no_weighted_class_v3/weights/last.pt
+./halibut/y11n_merged_no_weighted_class_v3/weights/best.pt
+./weights/yolo11l.pt
+./weights/yolo11m.pt
+./weights/yolo11s.pt
+./weights/yolo11x.pt
+./weights/yolo11n.pt
+./weights/yolov8l.pt
+./weights/yolov8m.pt
+./weights/yolov8n.pt
+./weights/yolov8s.pt
+./weights/yolov8x.pt
+./yolo11n.pt
+./result/y8n_merged_no_weighted_class_300/weights/last.pt
+./result/y8n_merged_no_weighted_class_300/weights/best.pt
+./result/y8n_merged_weighted_class_300/weights/last.pt
+./result/y8n_merged_weighted_class_300/weights/best.pt
+./result/y8s_merged_no_weighted_class/weights/last.pt
+./result/y8s_merged_no_weighted_class/weights/best.pt
+./result/y8s_merged_weighted_class/weights/last.pt
+./result/y8s_merged_weighted_class/weights/best.pt
+./result/y11n_merged_no_weighted_class/weights/last.pt
+./result/y11n_merged_no_weighted_class/weights/best.pt
+./result/cls_original/weights/last.pt
+./result/cls_original/weights/best.pt
+./result/det_original/weights/last.pt
+./result/det_original/weights/best.pt
+./result/det_shrink/weights/last.pt
+./result/det_shrink/weights/best.pt
+./result/y11n_merged_weighted_class/weights/last.pt
+./result/y11n_merged_weighted_class/weights/best.pt
+```
+  - *.log
